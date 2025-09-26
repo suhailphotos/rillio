@@ -1,0 +1,18 @@
+[project]
+name = "rillio"
+version = "0.0.1"
+description = "Pluggable, feature-aware database façade (name reservation)"
+readme = "README.md"            # <-- now inside py/
+requires-python = ">=3.10"
+authors = [{ name = "Suhail" }]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+]
+
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rillio"]       # <-- tell Hatchling where your package is

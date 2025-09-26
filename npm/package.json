@@ -1,0 +1,17 @@
+{
+  "name": "@suhailphotos/rillio",
+  "version": "0.0.2",
+  "description": "Pluggable, feature-aware database façade (name reservation)",
+  "license": "MIT",
+  "repository": "github:suhailphotos/rillio",
+  "homepage": "https://github.com/suhailphotos/rillio",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
