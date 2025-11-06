@@ -7,3 +7,7 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/suhailphotos/rillio"
 homepage = "https://github.com/suhailphotos/rillio"
+
+[dependencies]
+reqwest = { version = "0.12.24", features = ["blocking", "json"] }
+serde_json = "1.0.145"
