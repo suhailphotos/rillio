@@ -31,11 +31,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .get(&url)
         .header("Authorization", format!("Bearer {}", api_key))
         .header("Notion-Version", NOTION_VERSION)
-        .send()?; // blocking
+        .send()?;
 
     println!("Status {}", response.status());
 
-    let body = response.text()?; // raw JSON as String
+    let body = response.text()?;
     println!("{body}");
 
     Ok(())
@@ -57,8 +57,8 @@ fn bootstrap_config_files() -> Result<(PathBuf, PathBuf, bool, bool), Box<dyn st
     };
 
     let created_secrets = if !secrets_path.exists() {
-        fs::File::create(&secrets_path)?; // blank
-        // Tighten permissions on Unix: rw------- (600)
+        fs::File::create(&secrets_path)?;
+
         #[cfg(unix)]
         {
             use std::os::unix::fs::PermissionsExt;
